@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd8yx3we210gd"]
+
+[ext_resource type="Script" path="res://2D/level2D.gd" id="1_kxpfe"]
+[ext_resource type="Texture2D" uid="uid://de4skanhqfedr" path="res://2D/meteour.png" id="2_me74m"]
+
+[node name="Level2d" type="Node2D"]
+script = ExtResource("1_kxpfe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(6, 6)
+texture = ExtResource("2_me74m")
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://2D/player2D.tscn")
+spawn_path = NodePath("../Players")
